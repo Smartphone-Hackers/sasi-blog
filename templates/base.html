@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/plugin.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/font.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- External JavaScripts
+    ============================================= -->
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+
+    <!-- Document Title
+    ============================================= -->
+    <title>Smaze | Blog</title>
+
+</head>
+
+<body>
+    <!-- MAIN WRAPPER -->
+    <div id="main-wrapper" class="animsition clearfix">
+
+        <!-- HEADER -->
+        <header class="site-header clearfix">
+            <div class="header-wrap no-transparent">
+                <div class="container">
+                    <!-- Logo
+                        ============================================= -->
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.png" alt="Smaze Logo">
+                        </a>
+                    </div>
+                    <!-- #logo end -->
+                    <!-- Primary Navigation
+                     ============================================= -->
+                    <button id="menu-icon" class="burger">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                    <span class="bar bar-4"></span>
+                    </button>
+                    <nav id="main-nav" class="clearfix">
+                        <ul>
+                            <li class="menu-item-has-children">
+                                <a href="index.html">Home</a>
+
+                            </li>
+                            <li>
+                                <a href="about-us.html" aria-haspopup="true">About</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="portfolio.html">Portfolio</a>
+
+                            </li>
+                            <li class="menu-item-has-children active">
+                                <a href="blog-index.html">Blog</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- #main-nav end -->
+                </div>
+                <!-- header-wrap end -->
+            </div>
+        </header>
+        <!-- header end -->
+
+        <!-- CONTENT WRAPPER
+        ============================================= -->
+        <div id="content-wrapper" class="container wrapper">
+
+            <!-- Blog Content
+            ============================================= -->
+            {% block content %}
+            {% endblock %}
+            <!-- blog content end -->
+
+
+        </div>
+        <!-- #content-wrapper end -->
+
+        <!-- FOOTER
+        ============================================= -->
+        <footer class="site-footer">
+            <div class="container">
+
+                <!-- Footer Top
+                ============================================= -->
+                <div class="footer-top">
+                    <div class="logo-footer wow fadeIn">
+                        <img src="img/logo.png" alt="Smaze Logo">
+                    </div>
+                    <p class="subtitle-footer wow fadeIn">
+                        Smaze is the one of the leading creative digital agency in Melobourne, We think our work speaks for itself. We craft be spoke websites, digital tools, info-graphics and logos to bring your message to colorful design We think our work speaks for itself. We craft bespoke websites, digital tools, info-graphics and logos to bring websites, digital tools, info-graphics
+                    </p>
+                    <a href="contact.html" href="contact.html" class="btn wow fadeIn">Contact</a>
+                    <div class="footer-social">
+                        <ul class="social-profile">
+                            <li class="twitter"><a href="www.twitter.com"><i class="icon icon-social-twitter"></i></a></li>
+                            <li class="facebook"><a href="www.facebook.com"><i class="icon icon-social-facebook"></i></a></li>
+                            <li class="youtube"><a href="www.youtube.com"><i class="icon icon-social-youtube"></i></a></li>
+                            <li class="dribble"><a href="www.dribbble.com"><i class="icon icon-social-dribbble"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- footer-top end -->
+            </div>
+            <!-- container -->
+
+            <!-- Footer Bottom
+            ============================================= -->
+            <div class="footer-bottom clearfix">
+                <div class="copyright-footer">
+                    <p>Copyright &#169; 2015, All Rights Reserved <a href="http://www.themesawesome.com/">Themes Awesome</a>
+                    </p>
+                </div>
+            </div>
+            <!-- footer-bottom end -->
+
+        </footer>
+        <!-- footer end -->
+
+    </div>
+    <!-- #main wrapper end-->
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <!-- external -->
+    <script type="text/javascript" src="{% static 'js/plugin.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
