@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" />
 
+    <link rel="stylesheet" href="{% static 'css/extralayers.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/navstylechange.css' %}" type="text/css" />
+
+        <!-- External Stylesheets
+    ============================================= -->
+    <link rel="stylesheet" type="text/css" href="{% static 'rs-plugin/css/settings.css' %}" media="screen" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -56,7 +63,7 @@
                     <nav id="main-nav" class="clearfix">
                         <ul>
                             <li class="menu-item-has-children">
-                                <a href="index.html">Home</a>
+                                <a href="{% url 'home' %}">Home</a>
 
                             </li>
                             <li>
@@ -67,7 +74,7 @@
 
                             </li>
                             <li class="menu-item-has-children active">
-                                <a href="blog-index.html">Blog</a>
+                                <a href="{% url 'blog' %}">Blog</a>
                             </li>
                             <li>
                                 <a href="contact.html">Contact</a>
@@ -144,6 +151,103 @@
     <!-- external -->
     <script type="text/javascript" src="{% static 'js/plugin.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/plugin.js' %}"></script>
+    <!-- revolution slider -->
+    <script type="text/javascript" src="{% static 'rs-plugin/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+     <!-- /revolution slider -->
+    <script type="text/javascript">
+
+   jQuery(window).load(function() {
+      jQuery('.banner').revolution({
+         delay:9000,
+         startwidth:960,
+         startheight:500,
+         startWithSlide:0,
+
+         fullScreenAlignForce:"off",
+         autoHeight:"off",
+         minHeight:"off",
+
+         shuffle:"off",
+
+         onHoverStop:"off",
+
+         thumbWidth:100,
+         thumbHeight:50,
+         thumbAmount:3,
+
+         hideThumbsOnMobile:"off",
+         hideNavDelayOnMobile:1500,
+         hideBulletsOnMobile:"off",
+         hideArrowsOnMobile:"off",
+         hideThumbsUnderResoluition:0,
+
+         hideThumbs:0,
+         hideTimerBar:"on",
+
+         keyboardNavigation:"on",
+
+         navigationType:"bullet",
+         navigationArrows:"solo",
+         navigationStyle:"round",
+
+         navigationHAlign:"center",
+         navigationVAlign:"bottom",
+         navigationHOffset:30,
+         navigationVOffset:30,
+
+         soloArrowLeftHalign:"left",
+         soloArrowLeftValign:"center",
+         soloArrowLeftHOffset:20,
+         soloArrowLeftVOffset:0,
+
+         soloArrowRightHalign:"right",
+         soloArrowRightValign:"center",
+         soloArrowRightHOffset:20,
+         soloArrowRightVOffset:0,
+
+
+         touchenabled:"on",
+         swipe_velocity:"0.7",
+         swipe_max_touches:"1",
+         swipe_min_touches:"1",
+         drag_block_vertical:"false",
+
+         parallax:"mouse",
+         parallaxBgFreeze:"on",
+         parallaxLevels:[10,7,4,3,2,5,4,3,2,1],
+         parallaxDisableOnMobile:"off",
+
+         stopAtSlide:-1,
+         stopAfterLoops:-1,
+         hideCaptionAtLimit:0,
+         hideAllCaptionAtLilmit:0,
+         hideSliderAtLimit:0,
+
+         dottedOverlay:"none",
+
+         spinned:"spinner4",
+
+         fullWidth:"off",
+         forceFullWidth:"off",
+         fullScreen:"on",
+
+         fullScreenOffset:"0",
+
+         panZoomDisableOnMobile:"off",
+
+         simplifyAll:"off",
+
+
+         shadow:0
+
+      });
+
+   });
+
+</script>
 </body>
 
 </html>
+
